@@ -1,0 +1,28 @@
+﻿<div ng-controller="ListController">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Adet</th>
+                <th>Detay</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="p in products">
+                <td>{{p.Id}}</td>
+                <td>{{p.Name}}</td>
+                <td>{{p.Price}}</td>
+                <td>{{p.Count}}</td>
+                <th><a href="#/Details/{{p.Id}}" class="btn btn-success">Detay</a></th>
+                <th><a ng-click="delete(p)" class="btn btn-danger">Sil</a></th>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" ng-click="create()">Ürün Oluştur</button>
+
+    <div ng-include="'/Client/views/Edit.html'"></div>
+
+</div>
