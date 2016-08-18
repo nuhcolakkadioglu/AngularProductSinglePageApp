@@ -11,7 +11,7 @@
         };
 
         var update = function (product) {
-            return $http.put(productUrl + product.id, product);
+            return $http.put(productUrl + product.Id, product);
         };
 
         var create = function (product) {

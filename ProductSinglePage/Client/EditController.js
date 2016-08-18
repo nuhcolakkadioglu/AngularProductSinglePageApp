@@ -7,7 +7,10 @@
         $scope.save = function () {
             if ($scope.edit.product.Id) {
                 //ürün var güncelleme
-
+                productService.update($scope.edit.product).success(function () {
+                    angular.extend($scope.products, $scope.edit.product);
+                    $scope.edi.product = null;
+                });
             }
             else {
                 //ürün yok ekleme işlemi

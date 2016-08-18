@@ -13,6 +13,15 @@
         //    $scope.products = result;
         //})
 
+        $scope.edit = function () {
+
+            $scope.edit.product = angular.copy($scope.products);
+
+
+
+        };
+
+
     }
 
     app.controller("DetailsController", DetailsController);
