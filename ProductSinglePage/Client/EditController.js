@@ -7,6 +7,7 @@
         $scope.save = function () {
             if ($scope.edit.product.Id) {
                 //ürün var güncelleme
+
             }
             else {
                 //ürün yok ekleme işlemi
